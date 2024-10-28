@@ -17,14 +17,14 @@ class Databese {
     }
 
     init() {
-        this.connection = new Sequelize('postgresql://postgres:PuuHBUxkXJLZZnMaASvrLyFZqnGkdmei@junction.proxy.rlwy.net:13397/railway')
+        this.connection = new Sequelize('postgresql://postgres:JdGoiZvOWxuFHrOMGvpyTCPfiHHQFfFv@postgres.railway.internal:5432/railway')
         models.map((model) => model.init(this.connection))
             .map(
                 (model) => model.associate && model.associate(this.connection.models))
     }
     mongo(){
         this.mongoConnection = mongoose.connect(
-            'mongodb://mongo:vsRKAFBpMiEoKsmYvBSnnzCyPyMZGHbx@autorack.proxy.rlwy.net:21209')
+            'mongodb://mongo:gaGyDrKfPPacTPLXqUiNZxTrrlwsLumg@autorack.proxy.rlwy.net:21185')
     }
 }
 

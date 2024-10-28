@@ -15,9 +15,9 @@ module.exports = {
   })
 },
 
-  async down (queryInterface) {
+  // async down (queryInterface) {
 
-  await queryInterface.removeColumn('Products', 'category_id');
+  // await queryInterface.removeColumn('Products', 'category_id');
     
-  }
+  // }
 };
